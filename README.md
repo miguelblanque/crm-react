@@ -19,3 +19,7 @@ npx tailwindcss init -p
 Instalar react router
 cd crm-react 
 npm i react-router-dom
+
+
+Instalar Formik y yup
+npm i formik yup
