@@ -143,7 +143,7 @@ const Formulario = () => {
                       type="text"
                       className="mt-2 block w-full p-3 bg-gray-50 h-40"
                       placeholder="Notas del cliente"
-                      name="nombre"
+                      name="notas"
                     />
 
                 </div>
