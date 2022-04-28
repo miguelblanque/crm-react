@@ -31,7 +31,7 @@ const Inicio = () => {
       <thead className="bg-blue-800 text-white">
     <tr>
       <th className="p-2">Nombre</th>
-      <th className="p-2">Contactos</th>
+      <th className="p-2">Contacto</th>
       <th className="p-2">Empresa</th>
       <th className="p-2">Acciones</th>
     </tr>
