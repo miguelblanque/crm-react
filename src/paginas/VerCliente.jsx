@@ -3,16 +3,14 @@ import {useParams} from 'react-router-dom'
 
 const VerCliente = () => {
 
-    const params= useParams()
-    console.log('Id de Cliente:',params)
-    const [cliente, setCliente] = useState({})
+    const { id }= useParams();
 
- 
+    const [cliente, setCliente] = useState({})
 
     useEffect(() => {
         const obtenerClienteAPI= async()=>{
             try{
-                const url=`http://localhost:4000/clientes/1`
+                const url=`http://localhost:4000/clientes/${id}`
                 const respuesta = await fetch(url)
                 const resultado = await respuesta.json()
                 setCliente(resultado)
@@ -26,7 +24,48 @@ const VerCliente = () => {
    
   return (
     <div>
-        <p>Cliente: {cliente.nombre}</p>
+            <h1 className="front-black text-4xl text-blue-900">Ver Cliente: {cliente.nombre}</h1>
+        <p className="mt-3">Informacion del cliente</p>
+
+
+       {cliente.nombre && (
+       <p className="text-4xl text-gray-600 ">
+            <span className=" text-gray-800 uppercase font-bold">Cliente:
+            </span>
+            Cliente: {cliente.nombre}
+        </p>
+        )} 
+        {cliente.email && (
+            <p className="text-2xl text-gray-600 mt-4">
+            <span className="text-gray-800 uppercase font-bold">Email:
+            </span>
+            Cliente: {cliente.email}
+        </p>
+        )}
+        {cliente.telefono && (
+            <p className="text-2xl text-gray-600 mt-4">
+            <span className="text-gray-800 uppercase font-bold">Telefono:
+            </span>
+            Cliente: {cliente.telefono}
+        </p>
+        )}
+       {cliente.empresa && (
+        <p className="text-2xl text-gray-600 mt-4">
+        <span className="text-gray-800 uppercase font-bold">Empresa:
+        </span>
+        Cliente: {cliente.empresa}
+    </p>
+        ) }
+        
+        {cliente.notas && (
+            <p className="text-2xl text-gray-600 mt-4">
+            <span className="text-gray-800 uppercase font-bold">Notas:
+            </span>
+            Cliente: {cliente.notas}
+        </p>
+        )}
+        
+
     </div>
   )
 }
