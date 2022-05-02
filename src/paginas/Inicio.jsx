@@ -5,6 +5,8 @@ const Inicio = () => {
 
   const [clientes, setClientes] = useState([])
 
+   console.log(import.meta.env)
+ 
   useEffect(()=>{
       const orbtenerClientesAPI = async () => {
         try{
@@ -14,7 +16,7 @@ const Inicio = () => {
 
             //console.log(resultado)
            setClientes(resultado)
-
+ 
         }catch (error){
           console.log (error)
         }
