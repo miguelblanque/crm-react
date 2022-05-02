@@ -12,7 +12,7 @@ const Inicio = () => {
            const respuesta = await fetch(url)
            const resultado = await respuesta.json()
 
-            console.log(resultado)
+            //console.log(resultado)
            setClientes(resultado)
 
         }catch (error){
@@ -21,6 +21,28 @@ const Inicio = () => {
       }
       orbtenerClientesAPI()
   },[])
+
+  const handleEliminar = async (id) => {
+    const confirmar = confirm('¿Deseas eliminar este cliente?')
+
+     if(confirmar){
+        try{
+          const url =`http://localhost:4000/clientes/${id}`
+          const respuesta = await fetch (url, {
+            method: 'DELETE'
+          })
+
+          await respuesta.json()
+          
+          const arrayClientes = clientes.filter(cliente => cliente.id !== id)
+          setClientes(arrayClientes)
+          
+        }catch (error){
+          console.log(error)
+        }
+
+     }
+  }
 
   return (
     <>
@@ -42,6 +64,7 @@ const Inicio = () => {
         <Cliente
            key={cliente.id}
            cliente={cliente}
+           handleEliminar={handleEliminar}
         />
       ))}
       </tbody>
