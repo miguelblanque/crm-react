@@ -8,6 +8,8 @@ import Alerta from "./Alerta";
 import Spinner from "./Spinner";
 
 const Formulario = ({ cliente, cargando }) => {
+
+
   const navigate = useNavigate();
 
   const nuevoClienteSchema = Yup.object().shape({
