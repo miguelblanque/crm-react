@@ -32,39 +32,40 @@ const VerCliente = () => {
     Object.keys(cliente).length===0 ? 
     <p>No hay resultados</p> :(
 
-    <div>
+    <div className=" bg-white mt-10 px-5 py-5 rounded-md shadow-md md:w-3/4 mx-auto">
+    
        
             <>
-            <h1 className="front-black text-4xl text-blue-900">Ver Cliente: {cliente.nombre}</h1>
-        <p className="mt-3">Informacion del cliente</p>
+            <h1 className="text-gray-600 font-bold text-xl uppercase text-center">Ver Cliente: {cliente.nombre}</h1>
+        <p className="mt-3">Informacion detallada del cliente</p>
 
 
        {cliente.nombre && (
        <p className="text-4xl text-gray-600 ">
             <span className=" text-gray-800 uppercase font-bold">Cliente:
             </span>
-            Cliente: {cliente.nombre}
+             {cliente.nombre}
         </p>
         )} 
         {cliente.email && (
             <p className="text-2xl text-gray-600 mt-4">
             <span className="text-gray-800 uppercase font-bold">Email:
             </span>
-            Cliente: {cliente.email}
+             {cliente.email}
         </p>
         )}
         {cliente.telefono && (
             <p className="text-2xl text-gray-600 mt-4">
             <span className="text-gray-800 uppercase font-bold">Telefono:
             </span>
-            Cliente: {cliente.telefono}
+             {cliente.telefono}
         </p>
         )}
        {cliente.empresa && (
         <p className="text-2xl text-gray-600 mt-4">
         <span className="text-gray-800 uppercase font-bold">Empresa:
         </span>
-        Cliente: {cliente.empresa}
+         {cliente.empresa}
     </p>
         ) }
         
@@ -72,7 +73,7 @@ const VerCliente = () => {
             <p className="text-2xl text-gray-600 mt-4">
             <span className="text-gray-800 uppercase font-bold">Notas:
             </span>
-            Cliente: {cliente.notas}
+             {cliente.notas}
         </p>
         )}
         </>

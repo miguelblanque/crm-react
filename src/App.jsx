@@ -7,9 +7,7 @@ import EditarCliente from './paginas/EditarCliente'
 import VerCliente from './paginas/VerCliente'
 
 function App() {
-  //TODO: Revisar error import.meta.env.VITE_API_URL undefined
-  console.log('url: ',import.meta.env)
-  console.log('url: ',import.meta.env.VITE_API_URL)
+  
 
   return (
    <BrowserRouter>

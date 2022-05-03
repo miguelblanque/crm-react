@@ -25,7 +25,7 @@ const Inicio = () => {
   },[])
 
   const handleEliminar = async (id) => {
-    const confirmar = confirm('¿Deseas eliminar este cliente?')
+    const confirmar = confirm(`¿Deseas eliminar este cliente ${id}?`)
 
      if(confirmar){
         try{

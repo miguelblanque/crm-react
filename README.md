@@ -1,8 +1,58 @@
 # crm-react
  Proyecto Crm de React con Vite TailwindCSS, React Router y FormiLink
 
+Pagina principal de la aplicacion
 
 
+![alt text](/src/img/principalCliente.png)
+
+
+ Agregar un cliente
+
+
+
+
+
+Comprobamos que los datos son validos con Formik
+
+![alt text](/src/img/validaciones.png)
+
+
+Alta de cliente
+
+![alt text](/src/img/nuevoCliente.png)
+
+
+Comprobamos que aparece en el listado de clientes
+
+![alt text](/src/img/clientes.png)
+
+
+
+Modificar un cliente
+
+![alt text](/src/img/editarCliente.png)
+
+Comprobamos que se ha modificado
+
+![alt text](/src/img/clienteModificado.png)
+
+
+
+Eliminar un cliente
+
+![alt text](/src/img/eliminarCliente.png)
+
+
+Comprobamos que el cliente se ha eliminado
+
+![alt text](/src/img/clienteEliminado.png)
+
+
+--------------------------------------------------
+
+
+Instalacion y configuracion de proyecto.
 npm init vite@latest
 Cd com-react
 npm install
@@ -51,7 +101,3 @@ npm run preview
 VITE_API_URL:http://my-json-server.typicode.com/miguelblanque/crm-react/clientes
 
 
-TODO:
-1- Revisar error import.meta.env.VITE_API_URL undefined
-2- Dar formato  tabla -> listado clientes: http://localhost:3000/clientes/1
-3- README.md
