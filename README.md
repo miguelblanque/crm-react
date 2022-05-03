@@ -27,6 +27,10 @@ Comprobamos que aparece en el listado de clientes
 
 ![alt text](/src/img/clientes.png)
 
+Consultar un cliente
+
+![alt text](/src/img/verCliente.png)
+
 
 
 Modificar un cliente
@@ -59,6 +63,9 @@ npm install
 npm run dev
 
 
+
+
+
 Instalar Tailwindcss
 
 cd crm-react 
@@ -69,11 +76,15 @@ npx tailwindcss init -p
 
 
 
+
+
 Instalar react router
 
 cd crm-react 
 
 npm i react-router-dom
+
+
 
 
 
@@ -93,11 +104,15 @@ json-server --watch db.json --port 4000
 
 
 
+
+
 Añadir variables de entorno
 
 Documentacion:
 
 https://vitejs.dev/guide/env-and-mode.html#env-files
+
+
 
 
 
